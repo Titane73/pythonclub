@@ -5,4 +5,4 @@ from .models import Meeting, Minutes, Resource, Event
 admin.site.register(Meeting)
 admin.site.register(Minutes)
 admin.site.register(Resource)
-admin.site.register(Event)po
+admin.site.register(Event)

@@ -34,7 +34,7 @@ class Resource(models.Model):
     resource_type=models.CharField(max_length=255)
     resource_url=models.URLField()
     date_entered=models.DateTimeField(auto_now_add=True)
-    resource_user=models.ForeignKey(User, on_delete=DO_NOTHING)
+    resource_user=models.ForeignKey(User, on_delete=models.DO_NOTHING)
     resource_description=models.CharField(max_length=255)
 
     def __str__(self):
@@ -50,7 +50,7 @@ class Event(models.Model):
     event_date=models.DateField()
     event_time=models.TimeField()
     event_description=models.TextField()
-    event_user=models.ForeignKey(User, on_delete=DO_NOTHING)
+    event_user=models.ForeignKey(User, on_delete=models.DO_NOTHING)
 
     def __str__(self):
         return self.event_title

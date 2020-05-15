@@ -29,7 +29,7 @@ class Minutes(models.Model):
         db_table='minutes'
         verbose_name_plural='minutes'
 
-class Resource(models.Model):
+class Resources(models.Model):
     resource_name=models.CharField(max_length=255)
     resource_type=models.CharField(max_length=255)
     resource_url=models.URLField()
@@ -41,7 +41,7 @@ class Resource(models.Model):
         return self.resource_name
     
     class Meta:
-        db_table='resource'
+        db_table='resources'
         verbose_name_plural='resources'
 
 class Event(models.Model):

@@ -4,12 +4,16 @@
 
 <table class="table">
     <tr>
+        <!-- headers for each column -->
         <th>Resource Name</th>
         <th>Resource Type</th>
         <th>Resource URL</th>
         <th>Resource Description</th>
     </tr>
+
+    <!-- resource_list refers to resource_list in getResources method in views.py -->
     {% for item in resources_list %}
+    <!-- for loop for each column desired on the page -->
     <tr>
         <td>{{item.resource_name}}</td>
         <td>{{item.resource_type}}</td>

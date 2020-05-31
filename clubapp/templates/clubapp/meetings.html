@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% block content %}
+
+<h2>Meetings</h2>
+
+<table class="table">
+    <tr>
+        <!-- headers for each column -->
+        <th>Title</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Location</th>
+        <th>Agenda</th>
+    </tr>
+
+    <!-- meeting_list refers to meeting_list in getGeetings method in views.py -->
+    {% for item in meetings_list %}
+    <!-- for loop for each column desired on the page -->
+    <tr>
+        <td><a href="{% url 'details' id=Meetings.id %}">{{item.meeting_title}}</td>
+        <td>{{item.meeting_date}}</td>
+        <td>{{item.meeting_time}}</td>
+        <td>{{item.meeting_location}}</td>
+        <td>{{item.meeting_agenda}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+{% endblock %}

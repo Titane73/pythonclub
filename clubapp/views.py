@@ -16,7 +16,7 @@ def getMeetings(request):
     return render(request, 'clubapp/meetings.html', context=context)
 
 def meetingDetail(request, id):
-    details = Meetings.objects.get_object_or_404(pk=id)
+    details = get_object_or_404(Meetings, pk=id)
     context = {'details' : details}
     return render(request, 'clubapp/details.html', context=context)
 

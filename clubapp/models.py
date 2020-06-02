@@ -22,8 +22,8 @@ class Minutes(models.Model):
     attendance=models.ManyToManyField(User)
     minutes=models.TextField()
 
-    # def __str__(self):
-    #     return self.meeting_id
+    def __str__(self):
+        return self.meeting_id
     
     class Meta:
         db_table='minutes'

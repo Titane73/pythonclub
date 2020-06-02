@@ -16,7 +16,7 @@
     {% for item in meetings_list %}
     <!-- for loop for each column desired on the page -->
     <tr>
-        <td><a href="{% url 'details' id=Meetings.id %}">{{item.meeting_title}}</td>
+        <td><a href="{% url 'details' id=item.id %}">{{item.meeting_title}}</td>
         <td>{{item.meeting_date}}</td>
         <td>{{item.meeting_time}}</td>
         <td>{{item.meeting_location}}</td>

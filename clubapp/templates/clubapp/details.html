@@ -1,22 +1,15 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
+{% block content %}
 
-<h2>Minutes</h2>
-
-<table class="table">
-    <tr>
-        <!-- headers for each column -->
-        <th>Minutes</th>
-
-    </tr>
-
-    <!-- detauils refers to details in meetingDetails method in views.py -->
-    {% for item in details %}
-    <!-- for loop for each column desired on the page -->
-    <tr>
-        <td>{{item.details}}</td>
-    </tr>
-    {% endfor %}
-</table>
+<h2>{{ details.meeting_title }}</h2>
+<p>{{ details.meeting_date }}</p>
+<p>{{ details.meeting_time }}</p>
+<p>{{ details.meeting_location }}</p>
+<p>{{ details.meeting_agenda }}</p>
 
 
 {% endblock %}
+
+
+
+

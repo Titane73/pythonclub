@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Meetings(models.Model):
+    meeting_owner=models.ManyToManyField(User)
     meeting_title=models.CharField(max_length=255)
     meeting_date=models.DateField()
     meeting_time=models.TimeField()
@@ -13,7 +14,7 @@ class Meetings(models.Model):
         return self.meeting_title
     
     class Meta:
-        db_table='meeting'
+        db_table='meetings'
         verbose_name_plural='meetings'
 
 
@@ -23,7 +24,7 @@ class Minutes(models.Model):
     minutes=models.TextField()
 
     def __str__(self):
-        return self.meeting_id
+        return self.minutes
     
     class Meta:
         db_table='minutes'
@@ -44,7 +45,7 @@ class Resources(models.Model):
         db_table='resources'
         verbose_name_plural='resources'
 
-class Event(models.Model):
+class Events(models.Model):
     event_title=models.CharField(max_length=255)
     event_location=models.CharField(max_length=255)
     event_date=models.DateField()
@@ -56,7 +57,7 @@ class Event(models.Model):
         return self.event_title
     
     class Meta:
-        db_table='event'
+        db_table='events'
         verbose_name_plural='events'
 
 

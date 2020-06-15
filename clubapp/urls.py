@@ -9,5 +9,9 @@ urlpatterns = [
     #  getMeetings 
     path('getMeetings/', views.getMeetings, name='meetings'),
     #  minutes detail added to the meetings
-    path('meetingDetail/<int:id>', views.meetingDetail, name='details')
+    path('meetingDetail/<int:id>', views.meetingDetail, name='meeting_details'),
+    # events page, with info link
+    path('getEventss/', views.getEventss, name = 'events'), 
+    # event info linked to event title
+    path('getEventsInfo/<int:id>', views.getEventsInfo, name='event_info')
 ]

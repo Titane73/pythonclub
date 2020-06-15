@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 
-<h2>Meetings</h2>
+<h2>Events</h2>
 
 <table class="table">
     <tr>
@@ -10,12 +10,12 @@
 
     </tr>
 
-    <!-- meeting_list refers to meeting_list in getMeetings method in views.py -->
-    {% for item in meeting_details %}
+    <!-- meeting_list refers to meeting_list in getGeetings method in views.py -->
+    {% for e in event_list %}
     <!-- for loop for each column desired on the page -->
     <tr>
-        <td><a href="{% url 'meeting_details' id=item.id %}">{{item.meeting_title}}</td>
-        <td>{{item.meeting_date}}</td>
+        <td><a href="{% url 'event_info' id=e.id %}">{{e.event_title}}</td>
+        <td>{{e.event_date}}</td>
 
     </tr>
     {% endfor %}

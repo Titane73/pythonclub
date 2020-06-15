@@ -59,7 +59,7 @@ class Migration(migrations.Migration):
             },
         ),
         migrations.CreateModel(
-            name='Event',
+            name='Events',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('event_title', models.CharField(max_length=255)),

@@ -11,10 +11,10 @@
     </tr>
 
     <!-- meeting_list refers to meeting_list in getMeetings method in views.py -->
-    {% for item in meeting_details %}
+    {% for item in meeting_list %}
     <!-- for loop for each column desired on the page -->
     <tr>
-        <td><a href="{% url 'meeting_details' id=item.id %}">{{item.meeting_title}}</td>
+        <td><a href="{% url 'meeting_details' id=item.id %}">{{item.meeting_title}}</a></td>
         <td>{{item.meeting_date}}</td>
 
     </tr>
@@ -23,3 +23,4 @@
 
 
 {% endblock %}
+

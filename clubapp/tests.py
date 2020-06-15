@@ -49,5 +49,10 @@ class IndexText(TestCase):
         response = self.client.get(reverse('index'))
         self.assertEqual(response.status_code, 200)
 
+class NewMeetTest(TestCase):
+    def test_newmeet(self):
+        response = self.client.get(reverse('new_meeting'))
+        self.assertEqual(response.status_code, 200)
+
 
 

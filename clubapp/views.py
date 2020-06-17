@@ -4,9 +4,11 @@ from .forms import AddMeetingForm
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+@login_required
 def index(request):
     return render(request, 'clubapp/index.html')
 
+@login_required
 def getResources(request):
     resources_list = Resources.objects.all()
     context={'resources_list' : resources_list}
